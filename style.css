@@ -169,12 +169,70 @@ section {
   height: 80vh;
 }
 
-.section__pic-container {
-  display: flex;
-  height: 400px;
-  width: 400px;
-  margin: auto 0;
+.section__pic-container button {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
 }
+
+.btncolor {
+  font-weight: 600;
+  transition: all 300ms ease;
+  padding: 1rem;
+  width: 10rem;
+  border-radius: 2rem;
+}
+.btncolor:hover {
+  background-color: black;
+  color: white;
+}
+
+/*bounce effect upon browser laod*/
+
+@keyframes bounce {
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-30px);
+  }
+  60% {
+    transform: translateY(-15px);
+  }
+}
+.bounce {
+  animation: bounce 2s;
+  background-color: teal green;
+}
+
+/*
+
+.bounce {
+  display: flex; 
+  justify-content: center; 
+  align-items: center; 
+  text-align: center;
+  margin: 0 auto;
+  margin-top: 100px;
+  height: 20px;
+  width: 150px;
+  padding: 20px;
+  border-radius: 2rem;
+  background-color: #333;
+  color: antiquewhite;
+  animation: bounce 2s;
+}
+
+.bounce.bounce-animation {
+  -webkit-animation: bounce 0.75s ease-in-out;
+  animation: bounce 0.75s ease-in-out;
+}*/
 
 .section__text {
   align-self: center;
@@ -285,6 +343,7 @@ section {
 
 .about-pic {
   border-radius: 2rem;
+  background-color: black;
 }
 
 .arrow {
@@ -332,6 +391,7 @@ section {
   justify-content: center;
   flex-direction: column;
 }
+/*
 
 .article-container {
   display: flex;
@@ -351,6 +411,50 @@ article {
 
 article .icon {
   cursor: default;
+}
+
+
+*/
+.article-container {
+  display: flex;
+  text-align: initial;
+  flex-wrap: wrap;
+  flex-direction: row;
+  gap: 2.5rem;
+  justify-content: space-around;
+}
+article {
+  display: flex;
+  width: 10rem;
+  justify-content: left;
+  gap: 0.5rem;
+  position: relative; /* For positioning the tooltip */
+}
+.skill-icon {
+  position: relative;
+}
+.icon {
+  width: 24px; /* Adjust size as needed */
+  height: 24px; /* Adjust size as needed */
+  cursor: default;
+}
+.tooltip {
+  display: none;
+  position: absolute;
+  background-color: #333;
+  color: #fff;
+  padding: 5px;
+  border-radius: 3px;
+  font-size: 12px;
+  white-space: nowrap;
+  z-index: 1000;
+  top: 100%;
+  left: 0;
+  margin-top: 5px;
+  transform: translateY(5px);
+}
+.skill-icon:hover .tooltip {
+  display: block;
 }
 
 /* PROJECTS SECTION */
@@ -422,65 +526,59 @@ article .icon {
 }
   */
 
-  #contact {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    
-    
-  }
-  
-  .contact-info-upper-container {
-    display: flex;
-    justify-content: center;
-    border-radius: 2rem;
-    border: rgb(53, 53, 53) 0.1rem solid;
-    border-color: rgb(163, 163, 163);
-    background: rgb(250, 250, 250);
-    margin: 2rem auto;
-    padding: 0.5rem;
-  }
- 
- 
-  .contact-info-container {
-    display: flex;
-    align-items: center;
-    justify-content:space-between;
-    gap: 1.5rem;
-    margin: 1rem;
-    
-  }
-  
-  .contact-info-container label {
-    font-size: larger;
-  }
-  .contact-info-container input {
-    border: rgb(53, 53, 53) 0.1rem solid;
-    border-color: rgb(163, 163, 163);
-    border-radius: 1rem;
-    padding: 5px;
-  }
-  
-  .contact-info-container button {
-    font-size: larger;
-    padding: 0.5rem 1rem;
-    border-radius: 0.5rem;
-    border: none;
-    background-color: rgb(163, 163, 163);
-    color: white;
-    cursor: pointer;
-    transition: background-color 0.3s;
-    align-self: center; /* Center button horizontally */
-    margin-top: 1rem; /* Add some top margin */
-  }
-  
-  .contact-info-container button:hover {
-    background-color: rgb(53, 53, 53);
-  }
-  
+#contact {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
 
+.contact-info-upper-container {
+  display: flex;
+  justify-content: center;
+  border-radius: 2rem;
+  border: rgb(53, 53, 53) 0.1rem solid;
+  border-color: rgb(163, 163, 163);
+  background: rgb(250, 250, 250);
+  margin: 2rem auto;
+  padding: 0.5rem;
+}
 
- /*FOOTER SECTION */
+.contact-info-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+  margin: 1rem;
+}
+
+.contact-info-container label {
+  font-size: larger;
+}
+.contact-info-container input {
+  border: rgb(53, 53, 53) 0.1rem solid;
+  border-color: rgb(163, 163, 163);
+  border-radius: 1rem;
+  padding: 5px;
+}
+
+.contact-info-container button {
+  font-size: larger;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  border: none;
+  background-color: rgb(163, 163, 163);
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  align-self: center; /* Center button horizontally */
+  margin-top: 1rem; /* Add some top margin */
+}
+
+.contact-info-container button:hover {
+  background-color: rgb(53, 53, 53);
+}
+
+/*FOOTER SECTION */
 
 footer {
   height: 26vh;
@@ -489,4 +587,24 @@ footer {
 
 footer p {
   text-align: center;
+}
+
+/*tooltip*/
+article.tooltip {
+  display: none;
+  position: absolute;
+  background-color: #333;
+  color: #fff;
+  padding: 5px;
+  border-radius: 3px;
+  font-size: 12px;
+  white-space: nowrap;
+  z-index: 1000;
+  top: 100%;
+  left: 0;
+  margin-top: 5px;
+  transform: translateY(5px);
+}
+article.skill-icon:hover .tooltip {
+  display: block;
 }
