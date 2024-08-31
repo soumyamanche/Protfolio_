@@ -73,16 +73,18 @@
         </div>
       </div>
     </section>
+
+
     <section id="about">
       <p class="section__text__p1">Get To Know More</p>
       <h1 class="title">About Me</h1>
       <div class="section-container">
-        <div class="section__pic-container">
-          <img
-            src="	https://image.lexica.art/full_webp/94b6e853-1750-4582-a15c-4b11ed42a32b"
-            alt="Profile picture"
-            class="about-pic"
-          />
+        <div class="section__pic-container" id="video-container">
+          <!-- bounce effect to button Upon page load-->
+          <button id="play-button" class="btncolor bounce" id="bounce-element" >
+             Meet Developer
+         </button>
+         <!---dynamically video loads and-->
         </div>
         <div class="about-details-container">
           <div class="about-containers">
@@ -133,36 +135,49 @@
             <div class="article-container">
             
               <article>
+                <div class="skill-icon">
                 <img
                   src="./assets/checkmark.png"
                   alt="Experience icon"
                   class="icon"
                 />
+                <div class="tooltip">HTML: Intermediate knowledge in HTML.</div>
+                </div>
+            
                 <div>
                   <h3>HTML</h3>
-                  <p>Intermediate</p>
+                 
                 </div>
               </article>
+
               <article>
+                <div class="skill-icon">
                 <img
                   src="./assets/checkmark.png"
                   alt="Experience icon"
                   class="icon"
                 />
+                <div class="tooltip">CSS: Intermediate knowledge in CSS.</div>
+                </div>
                 <div>
                   <h3>CSS</h3>
-                  <p>Intermediate</p>
+                
                 </div>
               </article>
+
               <article>
+                <div class="skill-icon">
+
                 <img
                   src="./assets/checkmark.png"
                   alt="Experience icon"
                   class="icon"
                 />
+                <div class="tooltip">JavaScript: Intermediate knowledge in JavaScript.</div>
+                </div>
                 <div>
                   <h3>JavaScript</h3>
-                  <p>Intermediate</p>
+                
                 </div>
               </article>
             </div>
@@ -170,38 +185,50 @@
           <div class="details-container">
             <h2 class="experience-sub-title">Design Toolkit:</h2>
             <div class="article-container">
-            
               <article>
+                <div class="skill-icon">
                 <img
                   src="./assets/checkmark.png"
                   alt="Experience icon"
                   class="icon"
                 />
+                <div class="tooltip">Figma: Basic knowledge in Figma.</div>
+                </div>
+            
                 <div>
                   <h3>Figma</h3>
-                  <p>Basic</p>
+                 
                 </div>
               </article>
+
               <article>
+                <div class="skill-icon">
                 <img
                   src="./assets/checkmark.png"
                   alt="Experience icon"
                   class="icon"
                 />
+                <div class="tooltip">Canva: Basic knowledge in Canva.</div>
+                </div>
+            
                 <div>
                   <h3>Canva</h3>
-                  <p>Basic</p>
+                
                 </div>
               </article>
               <article>
+                <div class="skill-icon">
                 <img
                   src="./assets/checkmark.png"
                   alt="Experience icon"
                   class="icon"
                 />
+                <div class="tooltip">WordPress: Intermediate knowledge in WordPress.</div>
+                </div>
+            
                 <div>
-                  <h3>Wordpress</h3>
-                  <p>Intermediate</p>
+                  <h3>WordPress</h3>
+                  
                 </div>
               </article>
             </div>
@@ -268,30 +295,7 @@
               </button>
             </div>
           </div>
-          <div class="details-container color-container">
-            <div class="article-container">
-              <img
-                src="./assets/project-3.png"
-                alt="Project 3"
-                class="project-img"
-              />
-            </div>
-            <h2 class="experience-sub-title project-title">Project Three</h2>
-            <div class="btn-container">
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/'"
-              >
-                Github
-              </button>
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/'"
-              >
-                Live Demo
-              </button>
-            </div>
-          </div>
+          
         </div>
       </div>
       <img
