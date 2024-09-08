@@ -9,7 +9,41 @@
 
 body {
   font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh; /* Ensure the body takes full viewport height */
+  display: flex;
+  flex-direction: column;
 }
+/* Ensures full viewport height and prevents extra space */
+
+footer {
+  margin: 0;
+  padding: 0;
+  margin-top: auto; /* Ensure it's pushed to the bottom */
+}
+*::before, *::after {
+  content: '';
+  display: none;
+}
+#shadow-host-companion {
+  height: 0;
+  width: 0;
+  overflow: hidden;
+}
+
+
+/* Reset margins and padding globally */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Ensure no extra height on html or body */
+html, body {
+  height: 100%; /* Ensures full height without causing blank space */
+
 
 html {
   scroll-behavior: smooth;
@@ -529,8 +563,52 @@ article {
 #contact {
   display: flex;
   justify-content: center;
+  align-items: center;
   flex-direction: column;
+
+
 }
+.contact-info-upper-container{
+  width:600px;
+  border:1px solid black;
+  border-radius:1rem;
+  padding:10px;
+}
+
+input[type=text] , [type=email]{
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+.contact-info-container input{
+  border: rgb(53, 53, 53) 0.1rem solid;
+  border-color: rgb(163, 163, 163);
+  border-radius: 1rem;
+  padding: 10px;
+ 
+}
+.contact-info-container button:hover {
+  background-color: rgb(53, 53, 53);
+}
+
+.contact-info-container button {
+  font-size: larger;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  border: none;
+  background-color: rgb(163, 163, 163);
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  align-self: center; 
+  margin-top: 1rem;
+}
+/*
 
 .contact-info-upper-container {
   display: flex;
@@ -553,6 +631,7 @@ article {
 
 .contact-info-container label {
   font-size: larger;
+ 
 }
 .contact-info-container input {
   border: rgb(53, 53, 53) 0.1rem solid;
@@ -570,13 +649,14 @@ article {
   color: white;
   cursor: pointer;
   transition: background-color 0.3s;
-  align-self: center; /* Center button horizontally */
-  margin-top: 1rem; /* Add some top margin */
+  align-self: center; 
+  margin-top: 1rem;
 }
 
 .contact-info-container button:hover {
   background-color: rgb(53, 53, 53);
 }
+*/
 
 /*FOOTER SECTION */
 
@@ -608,3 +688,4 @@ article.tooltip {
 article.skill-icon:hover .tooltip {
   display: block;
 }
+  
