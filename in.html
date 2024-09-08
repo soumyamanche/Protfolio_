@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bounce Effect on Button</title>
+  <style>
+    @keyframes bounce {
+      0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+      }
+      40% {
+        transform: translateY(-30px);
+      }
+      60% {
+        transform: translateY(-15px);
+      }
+    }
+
+    .bounce {
+      animation: bounce 2s;
+    }
+  </style>
+</head>
+<body>
+  <button id="myButton">Click Me</button>
+
+  <script>
+    window.addEventListener('load', function() {
+      const button = document.getElementById('myButton');
+      if (button) {
+        button.classList.add('bounce');
+      }
+    });
+  </script>
+</body>
+</html>
